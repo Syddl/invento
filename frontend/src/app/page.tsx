@@ -1,13 +1,5 @@
-import Header from "@/components/Header";
-import Hero from "@/components/landing-page/Hero";
+import LandingPage from "@/features/landing/LandingPage";
 
 export default function Home() {
-  return (
-    <div className="relative">
-      <Header />
-      <main>
-        <Hero />
-      </main>
-    </div>
-  );
+  return <LandingPage />;
 }

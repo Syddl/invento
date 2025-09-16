@@ -1,8 +1,8 @@
 import { Lock, Shield, Zap } from "lucide-react";
-import { Button } from "../ui/button";
+import { Button } from "../../../components/ui/button";
 import { HeroBackground } from "./hero-background";
 import { HeroText } from "./HeroText";
-import { Badge } from "../ui/badge";
+import { Badge } from "../../../components/ui/badge";
 import { motion } from "motion/react";
 
 const Hero = () => {
