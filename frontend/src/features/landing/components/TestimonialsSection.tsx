@@ -38,15 +38,6 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section
       id="testimonials"
@@ -69,45 +60,7 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <Card className="shadow-2xl bg-white border-none">
-            <CardContent className="p-8">
-              <div className="text-center">
-                <div className="text-6xl mb-4">
-                  {testimonials[currentTestimonial].image}
-                </div>
-                <div className="flex justify-center mb-4">
-                  {[...Array(testimonials[currentTestimonial].rating)].map(
-                    (_, i) => (
-                      <Star
-                        key={i}
-                        className="h-5 w-5 fill-amber-300 text-amber-300 animate-pulse"
-                        style={{ animationDelay: `${i * 0.1}s` }}
-                      />
-                    )
-                  )}
-                </div>
-                <blockquote className="text-xl lg:text-2xl font-medium mb-6 italic leading-relaxed">
-                  &quot;{testimonials[currentTestimonial].content}&quot;
-                </blockquote>
-                <Badge
-                  variant="secondary"
-                  className="mb-4 bg-green-100 text-green-600 border-green-200 rounded-full"
-                >
-                  {testimonials[currentTestimonial].metrics}
-                </Badge>
-                <div>
-                  <p className="font-semibold text-lg">
-                    {testimonials[currentTestimonial].name}
-                  </p>
-                  <p className="text-gray-500">
-                    {testimonials[currentTestimonial].role} at{" "}
-                    {testimonials[currentTestimonial].company}
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
+          <TestimonialCard />
           {/* <div className="flex justify-center mt-6 gap-2">
             {testimonials.map((_, index) => (
               <button
@@ -128,3 +81,53 @@ const TestimonialsSection = () => {
 };
 
 export default TestimonialsSection;
+
+export const TestimonialCard = () => {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <Card className="shadow-2xl bg-white border-none">
+      <CardContent className="p-8">
+        <div className="text-center">
+          <div className="text-6xl mb-4">
+            {testimonials[currentTestimonial].image}
+          </div>
+          <div className="flex justify-center mb-4">
+            {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
+              <Star
+                key={i}
+                className="h-5 w-5 fill-amber-300 text-amber-300 animate-pulse"
+                style={{ animationDelay: `${i * 0.1}s` }}
+              />
+            ))}
+          </div>
+          <blockquote className="text-xl lg:text-2xl font-medium mb-6 italic leading-relaxed">
+            &quot;{testimonials[currentTestimonial].content}&quot;
+          </blockquote>
+          <Badge
+            variant="secondary"
+            className="mb-4 bg-green-100 text-green-600 border-green-200 rounded-full"
+          >
+            {testimonials[currentTestimonial].metrics}
+          </Badge>
+          <div>
+            <p className="font-semibold text-lg">
+              {testimonials[currentTestimonial].name}
+            </p>
+            <p className="text-gray-500">
+              {testimonials[currentTestimonial].role} at{" "}
+              {testimonials[currentTestimonial].company}
+            </p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
