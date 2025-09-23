@@ -3,7 +3,7 @@ import { Button } from "../../../components/ui/button";
 import { HeroBackground } from "./hero-background";
 import { HeroText } from "./HeroText";
 import { Badge } from "../../../components/ui/badge";
-import { motion } from "motion/react";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -27,7 +27,7 @@ const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button className="rounded-md bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500 text-white px-6 py-5 text-lg font-semibold hover:scale-105 transition-transform shadow-lg hover:shadow-xl cursor-pointer">
-              Start Your Free Journey
+              <Link href="/signup">Start Your Free Journey</Link>
             </Button>
             <Button className="rounded-md  px-6 py-5 text-lg font-semibold hover:scale-105 transition-transform shadow-lg hover:shadow-xl cursor-pointer border border-gray-300 bg-white  text-gray-700  hover:bg-gray-100 ">
               See It In Action

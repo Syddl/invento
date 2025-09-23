@@ -1,6 +1,7 @@
 "use client";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const CTA = () => {
   return (
@@ -21,11 +22,12 @@ const CTA = () => {
           <Button
             size="lg"
             className="text-xl cursor-pointer text-white px-12 py-6 bg-gradient-to-r from-indigo-500 to-purple-500 hover:shadow-2xl hover:scale-110 transition-all duration-300 animate-glow"
-            onClick={() => navigate("/login")}
           >
-            <Sparkles className="mr-3 h-6 w-6" />
-            Start Your Success Story Today
-            <ArrowRight className="ml-3 h-6 w-6" />
+            <Link href="/signup" className="flex items-center">
+              <Sparkles className="mr-3 h-6 w-6" />
+              Start Your Success Story Today
+              <ArrowRight className="ml-3 h-6 w-6" />
+            </Link>
           </Button>
           <p className="text-sm text-gray-500 mt-6">
             🎯 <strong>Setup in 5 minutes</strong> • 🔒{" "}

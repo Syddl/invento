@@ -36,7 +36,7 @@ const Header = () => {
           </Link>
 
           <Link
-            href="/demo"
+            href="/signup"
             className="drop-shadow-xs bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500 px-3 py-2 rounded-full text-sm font-semibold hover:opacity-90 flex items-center gap-1 transition"
           >
             <span className="text-white">Get Started</span>
