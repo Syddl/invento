@@ -1,153 +1,77 @@
 "use client";
-import { Heart, Package, Sparkles } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border/50 py-12 bg-muted/20">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8 animate-fade-up">
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex items-center justify-center w-8 h-8 bg-gradient-to-r from-primary to-success rounded-lg animate-float">
-                <Package className="h-5 w-5 text-white" />
-              </div>
-              <h3 className="text-lg font-bold bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
-                InventoryPro
-              </h3>
-            </div>
-            <p className="text-muted-foreground text-sm mb-4">
-              Making inventory management delightfully simple for businesses
-              worldwide 🌍
-            </p>
-            <div className="flex gap-2">
-              <Heart className="h-4 w-4 text-primary animate-pulse" />
-              <span className="text-xs text-muted-foreground">
-                Made with love for your success
+    <footer className="border-t border-neutral-200 bg-neutral-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="col-span-1 md:col-span-2">
+            <div className="flex items-center mb-4">
+              <span className="text-2xl font-bold text-neutral-900">
+                Invento
               </span>
             </div>
+            <p className="text-neutral-500 mb-4 max-w-md ">
+              Precision inventory management for small businesses. Take control
+              with real-time tracking, automated alerts, and actionable
+              insights.
+            </p>
           </div>
-
           <div>
-            <h4 className="font-semibold mb-4 text-primary">Product</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <h3 className="font-semibold text-text-neutral-900 mb-4">
+              Product
+            </h3>
+            <ul className="space-y-2 text-neutral-500">
               <li>
-                <a
-                  href="#features"
-                  className="hover:text-primary transition-colors duration-300"
-                >
+                <a href="#" className="hover:text-foreground transition-colors">
                   Features
                 </a>
               </li>
               <li>
-                <a
-                  href="#pricing"
-                  className="hover:text-primary transition-colors duration-300"
-                >
+                <a href="#" className="hover:text-foreground transition-colors">
                   Pricing
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="hover:text-primary transition-colors duration-300"
-                >
-                  API
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-primary transition-colors duration-300"
-                >
+                <a href="#" className="hover:text-foreground transition-colors">
                   Integrations
                 </a>
               </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4 text-primary">Company</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a
-                  href="#"
-                  className="hover:text-primary transition-colors duration-300"
-                >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-primary transition-colors duration-300"
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-primary transition-colors duration-300"
-                >
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-primary transition-colors duration-300"
-                >
-                  Contact
+                <a href="#" className="hover:text-foreground transition-colors">
+                  API
                 </a>
               </li>
             </ul>
           </div>
-
           <div>
-            <h4 className="font-semibold mb-4 text-primary">Support</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <h3 className="font-semibold text-neutral-900 mb-4">Support</h3>
+            <ul className="space-y-2 text-neutral-500">
               <li>
-                <a
-                  href="#"
-                  className="hover:text-primary transition-colors duration-300"
-                >
+                <a href="#" className="hover:text-foreground transition-colors">
                   Help Center
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="hover:text-primary transition-colors duration-300"
-                >
-                  Documentation
+                <a href="#" className="hover:text-foreground transition-colors">
+                  Contact Us
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="hover:text-primary transition-colors duration-300"
-                >
-                  Status Page
+                <a href="#" className="hover:text-foreground transition-colors">
+                  Status
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="hover:text-primary transition-colors duration-300"
-                >
-                  Privacy Policy
+                <a href="#" className="hover:text-foreground transition-colors">
+                  Security
                 </a>
               </li>
             </ul>
           </div>
         </div>
-
-        <div className="border-t border-border/50 mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p className="flex items-center justify-center gap-2">
-            &copy; 2024 InventoryPro. All rights reserved.
-            <Sparkles className="h-3 w-3 text-primary" />
-            <span className="text-primary">Built for your success</span>
-          </p>
+        <div className="border-t border-neutral-200 mt-8 pt-8 text-center text-neutral-500">
+          <p>&copy; 2025 Invento. All rights reserved.</p>
         </div>
       </div>
     </footer>
