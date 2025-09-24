@@ -22,7 +22,7 @@ const CTA = () => {
                 variant="secondary"
                 className="text-lg px-8 py-6 bg-white text-neutral-900 hover:bg-neutral-200 cursor-pointer"
               >
-                Start Free Trial
+                Start Now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>

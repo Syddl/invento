@@ -27,22 +27,22 @@ const Hero = () => {
                   <Link href="/dashboard">
                     <Button
                       size="lg"
-                      className="text-lg px-8 py-6 bg-neutral-900 text-white"
+                      className="text-lg px-8 py-6 bg-neutral-900 text-white cursor-pointer hover:bg-neutral-700"
                     >
-                      Start Free Trial
-                      <ArrowRight className="ml-2 h-5 w-5" />
+                      Get Started
+                      <ArrowRight className="ml-1 h-5 w-5" />
                     </Button>
                   </Link>
                   <Button
                     variant="outline"
                     size="lg"
-                    className="text-lg px-8 py-6 bg-white border-neutral-200"
+                    className="text-lg px-8 py-6 bg-white border-neutral-200 cursor-pointer hover:bg-neutral-100"
                   >
                     Watch Demo
                   </Button>
                 </div>
                 <p className="text-sm text-neutral-500 mt-4">
-                  No credit card required • 14-day free trial • Cancel anytime
+                  No credit card required • Instant access • Secure & reliable
                 </p>
               </div>
             </div>

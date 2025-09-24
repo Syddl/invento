@@ -3,76 +3,13 @@
 import type React from "react";
 import { useState } from "react";
 import Link from "next/link";
-import {
-  Eye,
-  EyeOff,
-  Package,
-  ArrowRight,
-  Check,
-  Codesandbox,
-} from "lucide-react";
+import { Eye, EyeOff, ArrowRight, Check, Codesandbox } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { toast } from "sonner";
-import { useRouter } from "next/navigation";
 
 export default function SignupPage() {
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    company: "",
-    password: "",
-    confirmPassword: "",
-    agreeToTerms: false,
-  });
-  const router = useRouter();
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (formData.password !== formData.confirmPassword) {
-      toast({
-        title: "Password Mismatch",
-        description: "Passwords do not match. Please try again.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    if (!formData.agreeToTerms) {
-      toast({
-        title: "Terms Required",
-        description: "Please agree to the Terms of Service to continue.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsLoading(true);
-
-    // Simulate account creation
-    setTimeout(() => {
-      console.log("[v0] Signup attempt:", formData);
-      toast({
-        title: "Account Created",
-        description:
-          "Welcome to ClearLedger! Your account has been created successfully.",
-      });
-      router.push("/dashboard");
-      setIsLoading(false);
-    }, 1500);
-  };
-
-  const handleChange = (field: string, value: string | boolean) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
-  };
-
   const features = [
     "Real-time inventory tracking",
     "Advanced analytics dashboard",
@@ -134,16 +71,18 @@ export default function SignupPage() {
               <CardTitle>Sign Up</CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-4 ">
+              <form //onSubmit={handleSubmit}
+                className="space-y-4 "
+              >
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="firstName">First Name</Label>
                     <Input
                       id="firstName"
-                      value={formData.firstName}
-                      onChange={(e) =>
-                        handleChange("firstName", e.target.value)
-                      }
+                      value={"formData.firstName"}
+                      // onChange={(e) =>
+                      //   handleChange("firstName", e.target.value)
+                      // }
                       placeholder="John"
                       required
                       className="border-neutral-200 shadow-sm mt-1"
@@ -153,8 +92,8 @@ export default function SignupPage() {
                     <Label htmlFor="lastName">Last Name</Label>
                     <Input
                       id="lastName"
-                      value={formData.lastName}
-                      onChange={(e) => handleChange("lastName", e.target.value)}
+                      value={"formData.lastName"}
+                      // onChange={(e) => handleChange("lastName", e.target.value)}
                       placeholder="Doe"
                       required
                       className="border-neutral-200 shadow-sm mt-1"
@@ -167,8 +106,8 @@ export default function SignupPage() {
                   <Input
                     id="email"
                     type="email"
-                    value={formData.email}
-                    onChange={(e) => handleChange("email", e.target.value)}
+                    value={"formData.email"}
+                    // onChange={(e) => handleChange("email", e.target.value)}
                     placeholder="john@company.com"
                     required
                     className="border-neutral-200 shadow-sm mt-1"
@@ -179,8 +118,8 @@ export default function SignupPage() {
                   <Label htmlFor="company">Company Name</Label>
                   <Input
                     id="company"
-                    value={formData.company}
-                    onChange={(e) => handleChange("company", e.target.value)}
+                    //value={formData.company}
+                    //onChange={(e) => handleChange("company", e.target.value)}
                     placeholder="Your Company Inc."
                     required
                     className="border-neutral-200 shadow-sm mt-1"
@@ -192,9 +131,9 @@ export default function SignupPage() {
                   <div className="relative">
                     <Input
                       id="password"
-                      type={showPassword ? "text" : "password"}
-                      value={formData.password}
-                      onChange={(e) => handleChange("password", e.target.value)}
+                      //type={showPassword ? "text" : "password"}
+                      //value={formData.password}
+                      //onChange={(e) => handleChange("password", e.target.value)}
                       placeholder="Create a strong password"
                       required
                       className="border-neutral-200 shadow-sm mt-1"
@@ -204,13 +143,14 @@ export default function SignupPage() {
                       variant="ghost"
                       size="icon"
                       className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
-                      onClick={() => setShowPassword(!showPassword)}
+                      //onClick={() => setShowPassword(!showPassword)}
                     >
-                      {showPassword ? (
+                      {/* {showPassword ? (
                         <EyeOff className="h-4 w-4" />
                       ) : (
                         <Eye className="h-4 w-4" />
-                      )}
+                      )} */}
+                      <Eye className="h-4 w-4" />
                     </Button>
                   </div>
                 </div>
@@ -220,11 +160,11 @@ export default function SignupPage() {
                   <div className="relative">
                     <Input
                       id="confirmPassword"
-                      type={showConfirmPassword ? "text" : "password"}
-                      value={formData.confirmPassword}
-                      onChange={(e) =>
-                        handleChange("confirmPassword", e.target.value)
-                      }
+                      //type={showConfirmPassword ? "text" : "password"}
+                      //value={formData.confirmPassword}
+                      // onChange={(e) =>
+                      //   handleChange("confirmPassword", e.target.value)
+                      // }
                       placeholder="Confirm your password"
                       required
                       className="border-neutral-200 shadow-sm mt-1"
@@ -234,15 +174,16 @@ export default function SignupPage() {
                       variant="ghost"
                       size="icon"
                       className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
-                      onClick={() =>
-                        setShowConfirmPassword(!showConfirmPassword)
-                      }
+                      // onClick={() =>
+                      //   setShowConfirmPassword(!showConfirmPassword)
+                      // }
                     >
-                      {showConfirmPassword ? (
+                      {/* {showConfirmPassword ? (
                         <EyeOff className="h-4 w-4" />
                       ) : (
                         <Eye className="h-4 w-4" />
-                      )}
+                      )} */}
+                      <Eye className="h-4 w-4" />
                     </Button>
                   </div>
                 </div>
@@ -251,10 +192,10 @@ export default function SignupPage() {
                   <input
                     id="terms"
                     type="checkbox"
-                    checked={formData.agreeToTerms}
-                    onChange={(e) =>
-                      handleChange("agreeToTerms", e.target.checked)
-                    }
+                    //checked={formData.agreeToTerms}
+                    // onChange={(e) =>
+                    //   handleChange("agreeToTerms", e.target.checked)
+                    // }
                     className="rounded border-gray-300 text-neutral-500 focus:ring-primary mt-1"
                   />
                   <Label htmlFor="terms" className="text-sm leading-relaxed">
@@ -278,9 +219,10 @@ export default function SignupPage() {
                 <Button
                   type="submit"
                   className="w-full bg-neutral-900 text-white cursor-pointer hover:bg-neutral-800"
-                  disabled={isLoading}
+                  //disabled={isLoading}
                 >
-                  {isLoading ? "Creating account..." : "Create Account"}
+                  {/* {isLoading ? "Creating account..." : "Create Account"} */}
+                  Create Account
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </form>

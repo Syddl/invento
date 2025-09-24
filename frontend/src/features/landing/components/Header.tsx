@@ -30,7 +30,7 @@ const Header = () => {
 
         <div className="flex items-center gap-5">
           <Button className="rounded-lg px-3 py-2 hover:bg-neutral-100">
-            <Link href="/signup">
+            <Link href="/login">
               <p className="text-neutral-900 text-sm">Sign in</p>
             </Link>
           </Button>
