@@ -1,51 +1,52 @@
 import { Lock, Shield, Zap } from "lucide-react";
 import { Button } from "../../../components/ui/button";
 import { HeroBackground } from "./hero-background";
-import { HeroText } from "./HeroText";
-import { Badge } from "../../../components/ui/badge";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
     <section>
       <HeroBackground>
         <div className="z-20 flex flex-col items-center justify-center w-full">
-          <Badge
-            variant={"secondary"}
-            className="hover:scale-105 transition-transform bg-gradient-to-r from-indigo-300 to-purple-300 text-gray-700 cursor-pointer hover:shadow-lg rounded-full"
-          >
-            🎉 Join 10,000+ successful businesses worldwide
-          </Badge>
-          <HeroText />
-          <p className="max-w-prose text-xl lg:text-2xl text-center mb-8 text-gray-500 ">
-            Say goodbye to inventory headaches! 👋 Our intelligent platform
-            makes managing products, suppliers, and stock levels as easy as
-            pressing a button.{" "}
-            <span className="bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent dark:from-indigo-500 dark:to-purple-500 font-semibold text-shadow-2xs">
-              Ready to transform your business?
-            </span>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="rounded-md bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500 text-white px-6 py-5 text-lg font-semibold hover:scale-105 transition-transform shadow-lg hover:shadow-xl cursor-pointer">
-              <Link href="/signup">Start Your Free Journey</Link>
-            </Button>
-            <Button className="rounded-md  px-6 py-5 text-lg font-semibold hover:scale-105 transition-transform shadow-lg hover:shadow-xl cursor-pointer border border-gray-300 bg-white  text-gray-700  hover:bg-gray-100 ">
-              See It In Action
-            </Button>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-6">
-            <p className="flex items-center gap-2 text-gray-600 mt-6">
-              <Shield className="h-5 w-5" />
-              <span>No credit card required</span>
-            </p>
-            <p className="flex items-center gap-2 text-gray-600 mt-6">
-              <Zap className="h-5 w-5" />
-              <span>Instant access</span>
-            </p>
-            <p className="flex items-center gap-2 text-gray-600 mt-6">
-              <Lock className="h-5 w-5" />
-              <span>Secure & reliable</span>
-            </p>
+          <div className="py-20 lg:py-32">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center max-w-4xl mx-auto">
+                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 mb-6 text-balance">
+                  Precision Inventory Management
+                  <span className="text-primary block">
+                    for Small Businesses
+                  </span>
+                </h1>
+                <p className="text-xl text-gray-500 mb-8 max-w-2xl mx-auto text-pretty">
+                  Take control of your inventory with Invento&apos;s
+                  professional-grade system. Real-time tracking, automated
+                  alerts, and actionable insights designed for growing
+                  businesses.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link href="/dashboard">
+                    <Button
+                      size="lg"
+                      className="text-lg px-8 py-6 bg-gray-900 text-white"
+                    >
+                      Start Free Trial
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                  </Link>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="text-lg px-8 py-6 bg-white border-gray-200"
+                  >
+                    Watch Demo
+                  </Button>
+                </div>
+                <p className="text-sm text-gray-500 mt-4">
+                  No credit card required • 14-day free trial • Cancel anytime
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </HeroBackground>

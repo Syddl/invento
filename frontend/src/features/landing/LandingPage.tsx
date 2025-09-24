@@ -7,7 +7,7 @@ import Footer from "@/features/landing/components/Footer";
 
 export default function LandingPage() {
   return (
-    <div className="relative">
+    <div className="relative font-geist-sans">
       <Header />
       <main>
         <Hero />
