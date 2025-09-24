@@ -13,7 +13,7 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-neutral-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
@@ -21,10 +21,10 @@ const Stats = () => {
               <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">
                 {stat.value}
               </div>
-              <div className="text-sm font-medium text-gray-900 mb-1">
+              <div className="text-sm font-medium text-neutral-900 mb-1">
                 {stat.label}
               </div>
-              <div className="text-xs text-gray-500">{stat.description}</div>
+              <div className="text-xs text-neutral-500">{stat.description}</div>
             </div>
           ))}
         </div>

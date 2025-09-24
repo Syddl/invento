@@ -11,31 +11,31 @@ const Header = () => {
             href="/"
             className="no-underline font-bold text-xl flex items-center gap-2"
           >
-            <Codesandbox className="text-gray-900" />
-            <span className="text-gray-900">Invento</span>
+            <Codesandbox className="text-neutral-900" />
+            <span className="text-neutral-900">Invento</span>
           </Link>
         </div>
 
-        <nav className="hidden md:flex font-medium gap-10 text-sm text-gray-500 ">
-          <Link href="#features" className="hover:text-gray-900">
+        <nav className="hidden md:flex font-medium gap-10 text-sm text-neutral-500 ">
+          <Link href="#features" className="hover:text-neutral-900">
             Features
           </Link>
-          <Link href="#testimonials" className="hover:text-gray-900">
+          <Link href="#testimonials" className="hover:text-neutral-900">
             Testimonials
           </Link>
-          <Link href="#about" className="hover:text-gray-900">
+          <Link href="#about" className="hover:text-neutral-900">
             About
           </Link>
         </nav>
 
         <div className="flex items-center gap-5">
-          <Button className="rounded-lg px-3 py-2 hover:bg-gray-100">
+          <Button className="rounded-lg px-3 py-2 hover:bg-neutral-100">
             <Link href="/signup">
-              <p className="text-gray-900 text-sm">Sign in</p>
+              <p className="text-neutral-900 text-sm">Sign in</p>
             </Link>
           </Button>
 
-          <Button className="rounded-lg px-3 py-2 bg-gray-900 hover:bg-gray-800 ">
+          <Button className="rounded-lg px-3 py-2 bg-neutral-900 hover:bg-neutral-800 ">
             <Link href="/signup">
               <p className="text-white text-sm">Get Started</p>
             </Link>
