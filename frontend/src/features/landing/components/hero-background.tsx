@@ -3,7 +3,7 @@ import React from "react";
 
 export function HeroBackground({ children }: { children?: React.ReactNode }) {
   return (
-    <div className="relative flex h-[50rem] w-full bg-white overflow-hidden">
+    <div className="relative flex h-[51rem] w-full bg-white overflow-hidden">
       <div
         className={cn(
           "absolute inset-0",
