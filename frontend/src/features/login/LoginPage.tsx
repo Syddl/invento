@@ -56,6 +56,7 @@ export default function LoginPage() {
                   //onChange={(e) => handleChange("email", e.target.value)}
                   placeholder="Enter your email"
                   required
+                  className="border-neutral-200 shadow-sm mt-1"
                 />
               </div>
 
@@ -71,6 +72,7 @@ export default function LoginPage() {
                     //onChange={(e) => handleChange("password", e.target.value)}
                     placeholder="Enter your password"
                     required
+                    className="border-neutral-200 shadow-sm mt-1"
                   />
                   <Button
                     type="button"
@@ -110,7 +112,7 @@ export default function LoginPage() {
 
               <Button
                 type="submit"
-                className="w-full bg-neutral-900 text-white" //disabled={isLoading}
+                className="w-full bg-neutral-900 text-white cursor-pointer hover:bg-neutral-800" //disabled={isLoading}
               >
                 {/* {isLoading ? "Signing in..." : "Sign In"} */}
                 Sign In
