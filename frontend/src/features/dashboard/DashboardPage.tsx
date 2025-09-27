@@ -1,7 +1,11 @@
-import React from "react";
+import DashboardCards from "./components/DashboardCards";
 
 const DashboardPage = () => {
-  return <main>DashboardPage</main>;
+  return (
+    <main className="p-5">
+      <DashboardCards />
+    </main>
+  );
 };
 
 export default DashboardPage;
