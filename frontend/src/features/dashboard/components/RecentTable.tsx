@@ -57,7 +57,7 @@ const invoices = [
 export function RecentTable() {
   return (
     <Table className="w-full text-sm text-neutral-700">
-      <TableCaption className="text-neutral-500 text-xs">
+      <TableCaption className="text-neutral-500 text-xs p-0">
         A list of your recent invoices.
       </TableCaption>
       <TableHeader>
@@ -81,7 +81,7 @@ export function RecentTable() {
         {invoices.map((invoice) => (
           <TableRow
             key={invoice.invoice}
-            className="hover:bg-neutral-100 transition-colors duration-150 border-neutral-300"
+            className="hover:bg-neutral-100 transition-colors duration-150 border-neutral-300 h-12"
           >
             <TableCell className="font-medium text-neutral-500">
               {invoice.invoice}

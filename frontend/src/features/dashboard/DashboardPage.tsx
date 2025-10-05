@@ -40,8 +40,8 @@ const DashboardPage = () => {
         <div className="lg:col-span-2 h-full">
           <Card className="h-full flex flex-col bg-gradient-to-b from-neutral-50 to-neutral-100 p-6 border border-neutral-200 rounded-xl shadow-sm">
             <CardHeader>
-              <div className="flex items-center justify-between">
-                <CardTitle>Recent Activity</CardTitle>
+              <div className="flex items-center justify-between ">
+                <CardTitle className="p-0">Recent Activity</CardTitle>
                 <Button variant="outline" size="sm">
                   View All
                 </Button>
