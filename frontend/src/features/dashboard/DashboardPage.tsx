@@ -1,7 +1,12 @@
 import DashboardCards from "./components/DashboardCards";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { AlertTriangle } from "lucide-react";
+import {
+  AlertTriangle,
+  ChartSpline,
+  Package,
+  ShoppingCart,
+} from "lucide-react";
 import { StatusBadge } from "./components/status-badge";
 import { RecentTable } from "./components/RecentTable";
 
@@ -33,7 +38,7 @@ const DashboardPage = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-5 items-stretch">
         {/* Recent Activity */}
         <div className="lg:col-span-2 h-full">
-          <Card className="h-full flex flex-col">
+          <Card className="h-full flex flex-col bg-gradient-to-b from-neutral-50 to-neutral-100 p-6 border border-neutral-200 rounded-xl shadow-sm">
             <CardHeader>
               <div className="flex items-center justify-between">
                 <CardTitle>Recent Activity</CardTitle>
@@ -50,7 +55,7 @@ const DashboardPage = () => {
 
         {/* Low Stock Alerts */}
         <div className="h-full">
-          <Card className="h-full flex flex-col">
+          <Card className="h-full flex flex-col bg-gradient-to-b from-neutral-50 to-neutral-100 p-6 border border-neutral-200 rounded-xl shadow-sm">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <AlertTriangle className="h-5 w-5 text-red-500" />
@@ -77,6 +82,28 @@ const DashboardPage = () => {
               ))}
             </CardContent>
           </Card>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-between mt-5 w-full bg-gradient-to-b from-neutral-50 to-neutral-100 px-6 py-4 border border-neutral-200 rounded-xl shadow-sm">
+        <p>Quick Actions</p>
+
+        <div className="flex gap-2">
+          <Button className="bg-neutral-900 text-white hover:bg-neutral-800 cursor-pointer">
+            <Package /> <span>Add Product</span>
+          </Button>
+          <Button
+            variant="outline"
+            className="bg-white text-800 hover:bg-neutral-100 cursor-pointer border-neutral-200"
+          >
+            <ShoppingCart /> <span>Manage Suppliers</span>
+          </Button>
+          <Button
+            variant="outline"
+            className="bg-white text-800 hover:bg-neutral-100 cursor-pointer border-neutral-200"
+          >
+            <ChartSpline /> Generate Report
+          </Button>
         </div>
       </div>
     </main>

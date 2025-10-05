@@ -56,30 +56,67 @@ const invoices = [
 
 export function RecentTable() {
   return (
-    <Table>
-      <TableCaption>A list of your recent invoices.</TableCaption>
+    <Table className="w-full text-sm text-neutral-700">
+      <TableCaption className="text-neutral-500 text-xs">
+        A list of your recent invoices.
+      </TableCaption>
       <TableHeader>
-        <TableRow>
-          <TableHead className="w-[100px]">Invoice</TableHead>
-          <TableHead>Status</TableHead>
-          <TableHead>Method</TableHead>
-          <TableHead className="text-right">Amount</TableHead>
+        <TableRow className="border-b border-neutral-200">
+          <TableHead className="w-[100px] font-semibold text-neutral-600">
+            Invoice
+          </TableHead>
+          <TableHead className="font-semibold text-neutral-600">
+            Status
+          </TableHead>
+          <TableHead className="font-semibold text-neutral-600">
+            Method
+          </TableHead>
+          <TableHead className="text-right font-semibold text-neutral-600">
+            Amount
+          </TableHead>
         </TableRow>
       </TableHeader>
+
       <TableBody>
         {invoices.map((invoice) => (
-          <TableRow key={invoice.invoice}>
-            <TableCell className="font-medium">{invoice.invoice}</TableCell>
-            <TableCell>{invoice.paymentStatus}</TableCell>
-            <TableCell>{invoice.paymentMethod}</TableCell>
-            <TableCell className="text-right">{invoice.totalAmount}</TableCell>
+          <TableRow
+            key={invoice.invoice}
+            className="hover:bg-neutral-100 transition-colors duration-150 border-neutral-300"
+          >
+            <TableCell className="font-medium text-neutral-500">
+              {invoice.invoice}
+            </TableCell>
+            <TableCell className="text-neutral-700">
+              <span
+                className={`px-2 py-1 rounded-full text-xs font-medium ${
+                  invoice.paymentStatus === "Paid"
+                    ? "bg-green-100 text-green-700"
+                    : invoice.paymentStatus === "Pending"
+                    ? "bg-yellow-100 text-yellow-700"
+                    : "bg-red-100 text-red-700"
+                }`}
+              >
+                {invoice.paymentStatus}
+              </span>
+            </TableCell>
+            <TableCell className="text-neutral-700">
+              {invoice.paymentMethod}
+            </TableCell>
+            <TableCell className="text-right text-neutral-800">
+              {invoice.totalAmount}
+            </TableCell>
           </TableRow>
         ))}
       </TableBody>
+
       <TableFooter>
-        <TableRow>
-          <TableCell colSpan={3}>Total</TableCell>
-          <TableCell className="text-right">$2,500.00</TableCell>
+        <TableRow className="border-t border-neutral-200">
+          <TableCell colSpan={3} className="font-semibold text-neutral-700">
+            Total
+          </TableCell>
+          <TableCell className="text-right font-semibold text-neutral-800">
+            $2,500.00
+          </TableCell>
         </TableRow>
       </TableFooter>
     </Table>
