@@ -30,7 +30,7 @@ const navigationItems = [
     href: "/products",
   },
   {
-    title: "Transaction",
+    title: "Transactions",
     icon: CreditCard,
     href: "/transaction",
   },

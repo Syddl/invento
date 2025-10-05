@@ -9,7 +9,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Pencil, Trash2 } from "lucide-react";
 
-const ProductsTable = () => {
+const SuppliersTable = () => {
   const products = [
     {
       name: 'MacBook Pro 16"',
@@ -78,7 +78,7 @@ const ProductsTable = () => {
     <div className="bg-white p-6 border border-gray-200 rounded-xl shadow-sm mt-5 max-h-170 overflow-y-auto">
       <Table>
         <TableHeader>
-          <TableRow className="border-b border-neutral-200 text-neutral-500">
+          <TableRow className="border-b border-neutral-200">
             <TableHead>Name</TableHead>
             <TableHead>SKU</TableHead>
             <TableHead>Category</TableHead>
@@ -93,27 +93,15 @@ const ProductsTable = () => {
           {products.map((product, index) => (
             <TableRow
               key={index}
-              className="h-15 hover:bg-neutral-100 transition-colors duration-150 border-neutral-200 "
+              className="h-15 hover:bg-neutral-100 transition-colors duration-150 border-neutral-200"
             >
-              <TableCell className="font-medium text-neutral-500">
-                {product.name}
-              </TableCell>
-              <TableCell className="text-neutral-500">{product.sku}</TableCell>
-              <TableCell className="text-neutral-500">
-                {product.category}
-              </TableCell>
-              <TableCell className="text-neutral-500">
-                {product.quantity}
-              </TableCell>
-              <TableCell className="text-neutral-500">
-                {product.supplier}
-              </TableCell>
-              <TableCell className="text-neutral-500">
-                {product.price}
-              </TableCell>
-              <TableCell className="text-neutral-500">
-                {getStatusBadge(product.status)}
-              </TableCell>
+              <TableCell className="font-medium">{product.name}</TableCell>
+              <TableCell>{product.sku}</TableCell>
+              <TableCell>{product.category}</TableCell>
+              <TableCell>{product.quantity}</TableCell>
+              <TableCell>{product.supplier}</TableCell>
+              <TableCell>{product.price}</TableCell>
+              <TableCell>{getStatusBadge(product.status)}</TableCell>
               <TableCell className="text-right flex items-center justify-end gap-2">
                 <Pencil className="w-4 h-4 text-gray-500 hover:text-gray-700 cursor-pointer" />
                 <Trash2 className="w-4 h-4 text-gray-500 hover:text-red-600 cursor-pointer" />
@@ -126,4 +114,4 @@ const ProductsTable = () => {
   );
 };
 
-export default ProductsTable;
+export default SuppliersTable;
