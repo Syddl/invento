@@ -16,7 +16,7 @@ const Header = () => {
           </Link>
         </div>
 
-        <nav className="hidden md:flex ">
+        <nav className="hidden md:flex gap-5 text-gray-500">
           <Link href="#features" className="hover:text-neutral-900">
             Features
           </Link>
