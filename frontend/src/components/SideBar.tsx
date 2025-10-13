@@ -89,7 +89,7 @@ export function CustomSidebar() {
                     isCollapsed ? "justify-center" : "justify-start"
                   } gap-3 px-3 py-2 rounded-lg transition-colors group relative ${
                     isActive
-                      ? "bg-neutral-700 text-white"
+                      ? "bg-neutral-900 text-white"
                       : "text-neutral-500 hover:bg-accent hover:text-accent-foreground"
                   }`}
                   title={isCollapsed ? item.title : undefined}
@@ -171,7 +171,7 @@ export function CustomSidebar() {
       {/* Collapse Toggle */}
       <button
         onClick={() => setIsCollapsed(!isCollapsed)}
-        className="absolute -right-3 top-20 w-6 h-6 bg-neutral-700 cursor-pointer shadow-sm border border-gray-200 rounded-full flex items-center justify-center hover:bg-accent transition-colors text-white"
+        className="absolute -right-3 top-20 w-6 h-6 bg-neutral-900 cursor-pointer shadow-sm border border-gray-200 rounded-full flex items-center justify-center hover:bg-accent transition-colors text-white"
       >
         {isCollapsed ? (
           <ChevronRight className="w-3 h-3" />

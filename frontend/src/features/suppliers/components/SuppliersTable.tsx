@@ -78,7 +78,7 @@ const SuppliersTable = () => {
     <div className="bg-white p-6 border border-gray-200 rounded-xl shadow-sm mt-5 max-h-170 overflow-y-auto">
       <Table>
         <TableHeader>
-          <TableRow className="border-b border-neutral-200">
+          <TableRow className="border-b border-neutral-200 text-neutral-500">
             <TableHead>Name</TableHead>
             <TableHead>SKU</TableHead>
             <TableHead>Category</TableHead>
@@ -93,7 +93,7 @@ const SuppliersTable = () => {
           {products.map((product, index) => (
             <TableRow
               key={index}
-              className="h-15 hover:bg-neutral-100 transition-colors duration-150 border-neutral-200"
+              className="h-15 hover:bg-neutral-100 transition-colors duration-150 border-neutral-200 text-neutral-500"
             >
               <TableCell className="font-medium">{product.name}</TableCell>
               <TableCell>{product.sku}</TableCell>
