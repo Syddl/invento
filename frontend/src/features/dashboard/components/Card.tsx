@@ -9,7 +9,7 @@ interface StatCard {
 
 const Card = ({ title, value, change, icon: Icon }: StatCard) => {
   return (
-    <div className="bg-gradient-to-b from-neutral-50 to-neutral-100 p-6 border border-neutral-200 rounded-xl">
+    <div className="bg-white p-6 border border-neutral-300 rounded-xl">
       <div className="flex items-center justify-between mb-2">
         <p className="text-neutral-500 font-semibold text-sm">{title}</p>
         <Icon className="h-5 w-5 text-neutral-600" />

@@ -54,7 +54,7 @@ export function CustomSidebar() {
 
   return (
     <div
-      className={`relative flex flex-col bg-neutral-100 border-r rounded-xl border-gray-200 shadow-sm  transition-all duration-300 ${
+      className={`relative flex flex-col bg-white border-r rounded-xl border-gray-200 shadow-sm  transition-all duration-300 ${
         isCollapsed ? "w-16" : "w-70"
       }`}
     >

@@ -59,11 +59,15 @@ const invoices = [
 export function RecentTable() {
   return (
     <div className="lg:col-span-2 h-full">
-      <Card className="h-full flex flex-col bg-gradient-to-b from-neutral-50 to-neutral-100 p-6 border border-neutral-200 rounded-xl shadow-sm">
-        <CardHeader>
+      <Card className="h-full flex flex-col bg-white p-6 border border-neutral-300 rounded-xl">
+        <CardHeader className="p-0">
           <div className="flex items-center justify-between ">
             <CardTitle className="p-0">Recent Activity</CardTitle>
-            <Button variant="outline" size="sm">
+            <Button
+              variant="outline"
+              size="sm"
+              className="bg-neutral-900 text-white cursor-pointer hover:bg-neutral-800 focus:ring-2 focus:ring-neutral-300"
+            >
               View All
             </Button>
           </div>

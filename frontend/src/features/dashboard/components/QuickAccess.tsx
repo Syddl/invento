@@ -4,7 +4,7 @@ import React from "react";
 
 const QuickAccess = () => {
   return (
-    <div className="flex items-center justify-between mt-5 w-full bg-gradient-to-b from-neutral-50 to-neutral-100 px-6 py-4 border border-neutral-200 rounded-xl shadow-sm">
+    <div className="flex items-center justify-between mt-5 w-full bg-white px-6 py-4 border border-neutral-300 rounded-xl">
       <p className="font-semibold">Quick Actions</p>
 
       <div className="flex gap-2">

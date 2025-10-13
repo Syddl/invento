@@ -28,7 +28,7 @@ const StockTable = () => {
 
   return (
     <div className="h-full">
-      <Card className="h-full flex flex-col bg-gradient-to-b from-neutral-50 to-neutral-100 py-6 px-3 border border-neutral-200 rounded-xl shadow-sm">
+      <Card className="h-full flex flex-col bg-white py-6 px-3 border border-neutral-300 rounded-xl">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <AlertTriangle className="h-5 w-5 text-red-500" />
