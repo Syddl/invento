@@ -2,6 +2,8 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/")
-def read_root():
-    return {"message": "Hello from FastAPI backend!"}
+@app.on_event("startup")
+async def startup_event():
+    print("Application is starting up...")
+
+app.include_router(...) 
