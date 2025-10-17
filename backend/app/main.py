@@ -6,4 +6,4 @@ app = FastAPI()
 async def startup_event():
     print("Application is starting up...")
 
-app.include_router(...) 
+# app.include_router() 
